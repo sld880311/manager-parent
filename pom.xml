@@ -60,6 +60,10 @@
   		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   		<!-- 指定Maven用什么编码来呈现站点的HTML文件 -->
     	<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    	
+    	<!-- 定义外部应用lib的地址 -->
+    	<!-- <project.external.lib.path>${project.basedir}</project.external.lib.path> -->
+    	<project.external.lib.path>D:\Workspaces\eclipse_oxygen\manager-parent\</project.external.lib.path>
     
 		<log4j.leve>debug</log4j.leve>
 		<log4j.ale>debug</log4j.ale>
@@ -534,6 +538,8 @@
 				<groupId>org.apache.batik</groupId>
 				<artifactId>batik-all</artifactId>
 				<version>${batikall.version}</version>
+				<scope>system</scope>
+				<systemPath>${project.external.lib.path}/lib/batik-all.jar</systemPath>
 			</dependency>
 		
 			<!-- iText -->
